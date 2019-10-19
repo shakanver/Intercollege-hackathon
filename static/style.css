@@ -2,3 +2,21 @@
     width: 200%;
     height: 200%;
 }
+
+.bg-a {
+    background-color: #00B2A9;
+    border-color: rgb(255, 97, 97);
+}
+
+.nav-link {
+    color: #ffffff;
+}
+
+.navbar-nav > li{
+    padding-left:30px;
+    padding-right:30px;
+}
+
+.navbar-img {
+    height: 50px;
+}

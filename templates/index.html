@@ -14,10 +14,10 @@
 <div class="container">
     <div class="row">
       <div class="col-10">
-        <button type="button" style="height:50px;width:100px" class="btn btn-warning big_button">Login</button>
+        <a href="{{ url_for('login') }}"><button type="button" style="height:50px;width:100px" class="btn btn-warning big_button">Login</button></a>
       </div>
       <div class="col">
-        <button type="button" style="height:50px;width:100px" class="btn btn-dark">Register</button>
+        <a href="{{ url_for('register') }}"><button type="button" style="height:50px;width:100px" class="btn btn-dark" href="{{ url_for('register') }}">Register</button></a>
       </div>
     </div>
   </div>

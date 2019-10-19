@@ -5,13 +5,17 @@ app = Flask(__name__)
 users = []
 messages = []
 
-@app.route('/register',methods=['GET', 'POST'])
+@app.route('/' , methods=['GET'])
+def home():
+    return render_template('./index.html')
+
+@app.route('/register', methods=['GET', 'POST'])
 def register():
 
     if request.method == 'GET':
         return render_template('register.html')
-    if request.method == 'POST':
 
+    if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
         college = request.form['college']

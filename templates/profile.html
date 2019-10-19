@@ -20,12 +20,18 @@
     <div class = "col-6">
         <h1>List of courses</h1>
         <h5>Current</h5>
-        <ul v4-for = "course in courses" class="list-group">
-                <li class="list-group-item">{{course}}</li>
-            </ul>
+        <ul v-for = "course in courses" class="list-group">
+                <li class="list-group-item">COMP1531</li>
+                <li class="list-group-item">DESN2000</li>
+                <li class="list-group-item">DIPP1112</li>
+        </ul>
+        <br>
         <h5>Taken</h5>
-        <ul v4-for = "course in courses" class="list-group">
-                <li class="list-group-item">{{course}}</li>
+        <ul v-for = "course in courses" class="list-group">
+            <li class="list-group-item">COMP1511</li>
+            <li class="list-group-item">ENGG1000</li>
+            <li class="list-group-item">MATH1131</li>
+            <li class="list-group-item">ENGG1231</li>
         </ul>
     </div>
 </div>

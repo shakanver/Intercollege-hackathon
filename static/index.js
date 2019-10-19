@@ -11,6 +11,9 @@ Vue.component('nice_input', {
 vm = new Vue ({
     el: "#vue_app",
     data: {
-        courses: ["Maths", "COMP"]
+        courses: [{
+            name: "Maths",
+            name: "COMP"
+        }]
     }
 })

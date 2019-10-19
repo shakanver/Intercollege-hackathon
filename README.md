@@ -2,7 +2,7 @@
 ## Fig Team
 ## By:
 
-* Jack Robbers
+* Jack Robbers (z5263682)
 * Zelun Li (z5260511)
 * Farhan Ghazi (z5199861)
 * Andrew Ang (z5245630)

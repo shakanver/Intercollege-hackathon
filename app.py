@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
@@ -16,7 +16,7 @@ def register():
         if user not in users:
             users.append(user)
             print(users)
-            return render_template("/login.html")
+            return redirect(url_for('login'))
         else:
             return "User already exists!"
 

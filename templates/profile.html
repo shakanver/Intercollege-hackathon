@@ -9,8 +9,7 @@
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="{{ url_for('static',filename='jack.JPG') }}" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">{{payload.name}}</h5>
-                <h5 class="card-degree"></h5>
+                <h5 class="card-title">Name: {{payload.username}}</h5>
                 <h5 class="card-text_degree">Degree: {{payload.degree}}</h5>
                 <h5 class="card-year">Year: {{payload.year}}</h5>
                 <h5 class="card-text_college">College: {{payload.college}}</h5>

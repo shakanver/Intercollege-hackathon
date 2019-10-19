@@ -22,12 +22,15 @@ def register():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    username = request.form['username']
-    password = request.form['password']
-    for i in range(0 , len(users)):
-        if users[i]['username'] == username and users[i]['password'] == password:
-            return "Login success!"
-    return "Invalid username or password"
+    if request.method == 'GET':
+        return render_template("/login.html")
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        for i in range(0 , len(users)):
+            if users[i]['username'] == username and users[i]['password'] == password:
+                return render_template("profile.html")
+        return "Invalid username or password"
 
 @app.route('/profile')
 def profile():

@@ -6,20 +6,28 @@ users = []
 
 @app.route('/register',methods=['GET', 'POST'])
 def register():
-    return render_template('register.html')
+
+    if request.method == 'GET':
+        return render_template('register.html')
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        user = {'username': username, 'password': password}
+        if user['username'] and user['password'] not in users:
+            users.append(user)
+            print(users)
+            return render_template("/login.html")
+        else:
+            return "User already exists!"
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-
-    username = request.form['username']
-    password = request.form['password']
-    users.append({'username': username, 'password': password})
-    print(users)
-    for i in range(0,len(users)):
-        if username == users[i]['username'] and password == users[i]['password']:
-            return render_template("/test.html")
-
+    # else:
+    # for i in range(0, len(users)):
+    #     if username == users[i]['username'] and password == users[i]['password']:
+    #         return render_template("/test.html")
     return "Invalid username or password"
+
 
 if __name__ == '__main__':
     app.run(debug=True, port = 2512)

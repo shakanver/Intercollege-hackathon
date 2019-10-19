@@ -13,7 +13,7 @@ def register():
         username = request.form['username']
         password = request.form['password']
         user = {'username': username, 'password': password}
-        if user['username'] and user['password'] not in users:
+        if user not in users:
             users.append(user)
             print(users)
             return render_template("/login.html")
@@ -22,12 +22,12 @@ def register():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    # else:
-    # for i in range(0, len(users)):
-    #     if username == users[i]['username'] and password == users[i]['password']:
-    #         return render_template("/test.html")
+    username = request.form['username']
+    password = request.form['password']
+    for i in range(0 , len(users)):
+        if users[i]['username'] == username and users[i]['password'] == password:
+            return "Login success!"
     return "Invalid username or password"
-
 
 if __name__ == '__main__':
     app.run(debug=True, port = 2512)

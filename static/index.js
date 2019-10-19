@@ -4,7 +4,7 @@ Vue.component('nice_input', {
     <div class="input-group-prepend"> \
         <span class="input-group-text" id="basic-addon1">{{field_name}}</span> \
     </div> \
-    <input class="form-control" :placeholder="place_holder"> \
+    <input class="form-control" :name="field_name" :placeholder="place_holder" required> \
 </div>'
 })
 

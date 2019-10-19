@@ -1,12 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Log in</h1>
-<form method="post" action="{{ url_for('login') }}">
-    <label for="username">Username</label>
-    <input name="username" id="username" required>
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" required>
-    <input type="submit" value="Login">
-</form>
+<h1 class="text-center">Log in</h1>
+<br>
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+        <form method="post" action="{{ url_for('login') }}">
+            <nice_input field_name="username" place_holder=""></nice_input>
+            <nice_input field_name="password" place_holder=""></nice_input>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+    <div class="col-4"></div>
+</div>
+
 {% endblock %}

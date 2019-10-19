@@ -3,7 +3,7 @@
 ## By:
 
 * Jack Robbers
-* Zelun Li
+* Zelun Li (z5260511)
 * Farhan Ghazi (z5199861)
 * Andrew Ang (z5245630)
 * Shakeel Anver (z5172568)

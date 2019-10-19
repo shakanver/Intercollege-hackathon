@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
@@ -14,11 +14,14 @@ def register():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        user = {'username': username, 'password': password}
+        college = request.form['college']
+        degree = request.form['degree']
+        year = request.form['year']
+        user = {'username': username, 'password': password, 'college': college, 'degree': degree, 'year':year}
         if user not in users:
             users.append(user)
             print(users)
-            return render_template("/login.html")
+            return redirect(url_for('login'))
         else:
             return "User already exists!"
 
@@ -49,8 +52,6 @@ def send_message():
 @app.route('/messages',methods = ['GET'])
 def view_messages():
     return render_template("/messages.html")
-
-
 
 
 

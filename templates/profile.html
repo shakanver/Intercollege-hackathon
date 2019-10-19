@@ -1,4 +1,33 @@
+{% extends 'base.html' %}
 
-<!-- TODO: make college a drop down list -->
+{% block content%}
+<div class="row">
+    <!-- TODO: make college a drop down list -->
+    <h1>Profile Information</h1>
+    <div class = "col-9">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="{{img_src}}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{name}}</h5>
+                <h5 class="card-degree">Degree</h5>
+                <p class="card-text_degree">{{degree}}</p>
+                <h5 class="card-year">Year</h5>
+                <p class="card-text_year">{{year}}</p>
+            </div>
+        </div>
+    </div>
+    <div class  = "col-3">
+        <h1>List of courses</h1>
+        <h5>Current</h5>
+        <ul v4-for = "course in courses" class="list-group">
+                <li class="list-group-item">{{courses}}</li>
+            </ul>
+        <h5>Taken</h5>
+        <ul v4-for = "course in courses" class="list-group">
+                <li class="list-group-item">{{courses}}</li>
+            </ul>
+    </div>
+</div>
 <label for="college">College</label>
 <input type name="password" id="password" required>
+{% endblock %}

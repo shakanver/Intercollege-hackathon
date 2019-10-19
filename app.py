@@ -50,17 +50,5 @@ def login():
 def user_profile():
     return render_template("/profile.html")
 
-@app.route('/sendmessage',methods=['POST'])
-def send_message():
-    user = request.form['username']
-    message = request.form['message']
-    user_message = {'user':user,'message':message}
-    messages.append(user_message)
-    return render_template
-
-@app.route('/messages',methods = ['GET'])
-def view_messages():
-    return render_template("/messages.html")
-
 if __name__ == '__main__':
     app.run(debug=True, port = 2512)

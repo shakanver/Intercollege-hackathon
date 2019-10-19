@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+<video autoplay loop id="video-background" muted plays-inline; width=100%>
+  <source src="{{ url_for('static',filename='video.mp4') }}" type="video/mp4"; codecs="avc1.4D401E, mp4a.40.2">
+</video>
 <div class="card">
     <img src="/static/logo.png" class="center" alt="..." style="width:248px;height:149px;text-align:center;">
     <div class="card-body">
@@ -21,5 +23,8 @@
       </div>
     </div>
   </div>
+
+</n>
+
 
 {% endblock %}

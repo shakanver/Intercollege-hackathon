@@ -1,15 +1,23 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Register your Collegian Account</h1>
-<form method="post"action="{{url_for('register') }}">
-    <label for="username">Username</label>
-    <input name="username" id="username" required><br>
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" required><br>
-    <input type="submit" value="Register!">
-</form>
-<br><br><h5>Already registered with us? Click below to login!</h5>
-<button><a href="{{ url_for('login') }}">Login!</a></button>
+<h1 class="text-center">Register your Collegian Account</h1>
+<br>
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+        <form method="post" action="{{url_for('register') }}">
+                <nice_input field_name="username" place_holder=""></nice_input>
+                <nice_input field_name="password" place_holder=""></nice_input>
+                <nice_input field_name="degree" place_holder=""></nice_input>
+                <nice_input field_name="year" place_holder=""></nice_input>
+                <input class="btn btn-primary" type="submit" value="Register!">
+        </form>
+        <br><br><h5>Already registered with us? Click below to login!</h5>
+        <button class="btn btn-primary" href="{{ url_for('login') }}">Login!</button>
+    </div>
+    <div class="col-4"></div>
+</div>
+
 
 {% endblock %}

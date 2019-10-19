@@ -2,14 +2,11 @@
 
 {% block content %}
 <h1>Register your Collegian Account</h1>
-<div class="row">
-    <form method="post">
-        <nice_input field_name="username" place_holder=""></nice_input>
-        <label for="username">Username</label>
-        <input name="username" id="username" required>
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" required>
-        <input type="submit" value="Register">
-    </form>
-</div>
+<form method="post"action="{{url_for('register') }}">
+    <label for="username">Username</label>
+    <input name="username" id="username" required>
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" required>
+    <input type="submit" value="Register">
+</form>
 {% endblock %}

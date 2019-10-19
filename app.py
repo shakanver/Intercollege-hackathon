@@ -10,7 +10,7 @@ messages = []
 def index():
     return render_template('index.html')
 
-@app.route('/register')
+@app.route('/register' , methods=['GET' , 'POST'])
 def register():
 
     if request.method == 'GET':

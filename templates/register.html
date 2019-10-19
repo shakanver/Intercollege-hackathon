@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+
+{% block content %}
 <h1>Register your Collegian Account</h1>
 <form method="post">
     <label for="username">Username</label>
@@ -7,3 +9,4 @@
     <input type="password" name="password" id="password" required>
     <input type="submit" value="Register">
 </form>
+{% endblock %}

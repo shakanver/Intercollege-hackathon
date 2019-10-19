@@ -5,6 +5,7 @@ app = Flask(__name__)
 users = []
 messages = []
 
+
 @app.route('/register',methods=['GET', 'POST'])
 def register():
 
@@ -30,7 +31,7 @@ def login():
         password = request.form['password']
         for i in range(0 , len(users)):
             if users[i]['username'] == username and users[i]['password'] == password:
-                return render_template("profile.html")
+                return render_template("profile.html",payload=users[i])
         return "Invalid username or password"
 
 @app.route('/profile', methods=['GET'])

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,3 +13,17 @@
     </form>
 </body>
 </html>
+=======
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Register your Collegian Account</h1>
+<form method="post">
+    <label for="username">Username</label>
+    <input name="username" id="username" required>
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" required>
+    <input type="submit" value="Register">
+</form>
+{% endblock %}
+>>>>>>> master

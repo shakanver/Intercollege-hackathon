@@ -5,11 +5,11 @@ app = Flask(__name__)
 users = []
 messages = []
 
-@app.route('/' , methods=['GET'])
-def home():
-    return render_template('./index.html')
 
-@app.route('/register', methods=['GET', 'POST'])
+@app.route('/')
+def index():
+    return render_template('index.html')
+
 def register():
 
     if request.method == 'GET':

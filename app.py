@@ -4,24 +4,17 @@ app = Flask(__name__)
 
 users = []
 
-@app.route('/register',methods=['POST'])
+@app.route('/register',methods=['GET', 'POST'])
 def register():
-    username = request.form['username']
-    password = request.form['passsword']
-    users.append({'username': username,'password': password})
     return render_template('register.html')
-
-@app.route('/home', methods=['GET'])
-def home():
-    return render_template("./register.html")
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
 
     username = request.form['username']
     password = request.form['password']
+    users.append({'username': username, 'password': password})
     print(users)
-    print(username , password)
     for i in range(0,len(users)):
         if username == users[i]['username'] and password == users[i]['password']:
             return render_template("/test.html")

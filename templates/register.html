@@ -6,11 +6,11 @@
 <div class="row">
     <div class="col-4"></div>
     <div class="col-4">
-        <form method="post" action="{{url_for('register') }}">
-                <nice_input field_name="username" place_holder="" name="username"></nice_input>
-                <nice_input field_name="password" place_holder=""name="password"></nice_input>
-                <nice_input field_name="degree" place_holder=""name="degree"></nice_input>
-                <nice_input field_name="year" place_holder=""name="year"></nice_input>
+        <form method="post" action="{{ url_for('register') }}">
+                <nice_input field_name="username" place_holder=""></nice_input>
+                <nice_input field_name="password" place_holder=""></nice_input>
+                <nice_input field_name="degree" place_holder=""></nice_input>
+                <nice_input field_name="year" place_holder=""></nice_input>
                 <input class="btn btn-primary" type="submit" value="Register!">
         </form>
         <br><br><h5>Already registered with us? Click below to login!</h5>

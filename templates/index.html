@@ -8,21 +8,13 @@
     <div class="card-body">
       <h3 class="card-title">Our Story</h3>
       <p class="card-text">We are trying to change the college learning experience.</p>
-      <p class="card-text"><small class="text-muted">we are the best</small></p>
+      <p class="card-text"><small class="text-muted">Hi there! Welcome to our site. We hope you’re enjoying your time here so far. Let us introduce ourselves - we at Collegian, aim to help those within the college community connect with each other in order to provide greater pool of resources as well as bridging the gap of the colleges in the vicinity. </small></p>
     </div>
   </div>
 
-
-<div class="container">
-    <div class="row">
-      <div class="col-10">
-        <a href="{{ url_for('login') }}"><button type="button" style="height:50px;width:100px" class="btn btn-warning big_button">Login</button></a>
-      </div>
-      <div class="col">
-        <a href="{{ url_for('register') }}"><button type="button" style="height:50px;width:100px" class="btn btn-dark" href="{{ url_for('register') }}">Register</button></a>
-      </div>
-    </div>
-</div>
+  <img src="static/logo.png" style="height:200px;width:350px">
+  <a href="{{ url_for('login') }}"><button type="button" style="height:60px;width:120px" class="btn btn-warning big_button">Login</button></a>
+  <a href="{{ url_for('register') }}"><button type="button" style="height:60px;width:120px" class="btn btn-dark" href="{{ url_for('register') }}">Register</button></a>
 
 
 {% endblock %}

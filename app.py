@@ -1,13 +1,8 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
 users = [{"username": "shakeel", "password": "shak28"}]
-
-
-@app.route('/login')
-def login():
-    return render_template('login.html')
 
 @app.route('/register')
 def register():
@@ -19,6 +14,7 @@ def home():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+
     username = request.form['username']
     password = request.form['password']
 

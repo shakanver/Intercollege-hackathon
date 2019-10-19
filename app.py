@@ -4,6 +4,10 @@ app = Flask(__name__)
 
 users = []
 
+@app.route('/index')
+def index():
+    return render_template('index.html')
+
 @app.route('/register',methods=['GET', 'POST'])
 def register():
 

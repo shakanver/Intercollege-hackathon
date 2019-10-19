@@ -3,6 +3,7 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 users = []
+messages = []
 
 @app.route('/register',methods=['GET', 'POST'])
 def register():
@@ -28,6 +29,24 @@ def login():
         if users[i]['username'] == username and users[i]['password'] == password:
             return "Login success!"
     return "Invalid username or password"
+
+@app.route('/profile', methods=['GET'])
+def user_profile():
+    return render_template("/profile.html")
+
+@app.route('/sendmessage',methods=['POST'])
+def send_message():
+    user = request.form['username']
+    message = request.form['message']
+    user_message = {'user':user,'message':message}
+    messages.append(user_message)
+    return render_template
+
+@app.route('/messages',methods = ['GET'])
+def view_messages():
+    return render_template("/messages.html")
+
+
 
 
 

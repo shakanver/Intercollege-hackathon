@@ -4,10 +4,13 @@
 <h1 class="text-center">Register your Collegian Account</h1>
 <br>
 <div class="row">
-    <form method="post">
+    <form method="post" action="{{url_for('register') }}">
         <nice_input field_name="username" place_holder=""></nice_input>
         <nice_input field_name="password" place_holder=""></nice_input>
-        <input type="submit" value="Register">
+        <input class="btn btn-primary" type="submit" value="Register!">
     </form>
 </div>
+<br><br><h5>Already registered with us? Click below to login!</h5>
+<button class="btn btn-primary" href="{{ url_for('login') }}">Login!</button>
+
 {% endblock %}

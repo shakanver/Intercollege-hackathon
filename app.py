@@ -2,9 +2,15 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-users = [{"username": "shakeel", "password": "shak28"}]
+users = []
 
 
+@app.route('/register',methods=['POST'])
+def register():
+    username = request.form['username']
+    password = reauest.form['passsword']
+    users.append({'username': username,'password': password})
+    return render_template('register.html')
 
 @app.route('/home', methods=['GET'])
 def home():
@@ -14,7 +20,7 @@ def home():
 def login():
     username = request.form['username']
     password = request.form['password']
-
+    print(users)
     print(username , password)
     for i in range(0,len(users)):
         if username == users[i]['username'] and password == users[i]['password']:
